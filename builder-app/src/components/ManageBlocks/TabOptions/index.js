@@ -1,49 +1,29 @@
 import { Tabs } from "antd";
 import "antd/dist/antd.css";
-import React, { useContext, useState } from "react";
-import { ComponentContext } from "../../../contexts/ComponentContext";
+import React, { useState } from "react";
 import "../../../styles/main.scss";
 import TabContent from "../TabContent/index";
+// import { AppContext } from "../../../contexts/app-context";
 
 const { TabPane } = Tabs;
 
-function TabOptions() {
-  // load context
-  const { getDataInTab } = useContext(ComponentContext);
-
+function TabOptions(props) {
   const [size] = useState("large");
-  const [inputValues, setInputValues] = useState({
-    headline: "",
-  });
-
-  const onHandleChange = (event) => {
-    const target = event.target;
-    const name = target.name;
-
-    setInputValues({ ...inputValues, [name]: target.value });
-
-    // send state to context
-    getDataInTab(inputValues);
-  };
 
   return (
     <Tabs type="card" size={size} centered>
       <TabPane tab={<i className="bi bi-grid-fill" />} key="1">
-        <TabContent />
+        <TabContent content={props.content} />
       </TabPane>
       <TabPane tab={<i className="bi bi-layers-fill" />} key="2">
-        <form>
-          <label style={{ justifyContent: "center", display: "flex" }}>
-            <input
-              type="text"
-              name="headline"
-              onChange={onHandleChange}
-              value={inputValues.headline}
-              placeholder="Enter headline..."
-              style={{ marginLeft: "5px" }}
-            />
-          </label>
-        </form>
+        <input
+          placeholder="headline"
+          value={props.selectedComp.headline}
+          onChange={(event) => {
+            props.selectedComp.headline = event.target.value;
+            props.forceUpdate(!props.update);
+          }}
+        />
       </TabPane>
       <TabPane tab={<i className="bi bi-palette-fill" />} key="3">
         Content of Tab Pane 3

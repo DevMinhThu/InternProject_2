@@ -1,11 +1,10 @@
 import React from "react";
 
-function Form() {
+function Form(props) {
   return (
-    <form>
+    <form onClick={props.onClick}>
       <label>
-        Name:
-        <input type="text" name="name" />
+        <input type="text" name="name" placeholder={props.block.headline} />
       </label>
     </form>
   );

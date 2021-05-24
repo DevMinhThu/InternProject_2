@@ -2,12 +2,9 @@ import React from "react";
 
 function Button(props) {
   return (
-    <>
-      <p style={{ color: "coral", fontSize: "20px" }}>
-        This is: {props.block.headline}
-      </p>
-      <button style={style}>Button</button>
-    </>
+    <div onClick={props.onClick}>
+      <button style={style}>{props.block.headline}</button>
+    </div>
   );
 }
 
@@ -24,12 +21,3 @@ const style = {
 };
 
 export default Button;
-
-/* 
-E91E63
-2196F3
-3F51B5
-F44336
-212121
-009688
- */

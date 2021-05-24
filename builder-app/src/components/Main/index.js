@@ -4,8 +4,7 @@ import "../../styles/main.scss";
 
 function Main(props) {
   // load context
-  const { getData, dataComponents } = useContext(ComponentContext);
-  // console.log(dataComponents);
+  const { getData } = useContext(ComponentContext);
 
   return (
     <div className="main-content">

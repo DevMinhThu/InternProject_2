@@ -1,9 +1,10 @@
 import { Collapse } from "antd";
 import "antd/dist/antd.css";
 import React, { useContext } from "react";
-import { ComponentContext } from "../../../contexts/ComponentContext";
+import Components from "../../../Handler/components";
 import "../../../styles/main.scss";
 import "./style.css";
+// import { ComponentContext } from "../../../contexts/ComponentContext";
 
 const { Panel } = Collapse;
 
@@ -11,26 +12,20 @@ function Text(props) {
   return <p style={styleText}>{props.title}</p>;
 }
 
-function TabContent() {
-  // load context
-  const { getData } = useContext(ComponentContext);
+function TabContent(props) {
+  // const { getData } = useContext(ComponentContext);
 
   return (
     <div className="tab-content">
-      {/* {console.log(props.data[0].props.block.component)} */}
       <Collapse className="styleCollapse">
         <Panel header={<Text title="Button" />} key="1" className="demo">
-          {getData()}
+          {props.content.body.map((block) => {
+            return <Components block={block} />;
+          })}
+          {/* {getData()} */}
         </Panel>
         <Panel header={<Text title="Footer" />} key="2"></Panel>
         <Panel header={<Text title="Header" />} key="3"></Panel>
-        <Panel header={<Text title="Radio" />} key="4"></Panel>
-        <Panel header={<Text title="SearchBar" />} key="5"></Panel>
-        <Panel header={<Text title="CheckBox" />} key="6"></Panel>
-        <Panel header={<Text title="FormInputs" />} key="7"></Panel>
-        <Panel header={<Text title="Spinner" />} key="8"></Panel>
-        <Panel header={<Text title="Switch" />} key="9"></Panel>
-        <Panel header={<Text title="ToolBar" />} key="10"></Panel>
       </Collapse>
       ,
     </div>
