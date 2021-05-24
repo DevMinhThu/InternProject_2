@@ -3,14 +3,18 @@ import React, { useContext } from "react";
 import { AppContext } from "../contexts/app-context";
 
 import Button from "./components/Button";
+import Footer from "./components/Footer";
 import Form from "./components/Form";
+import Header from "./components/Header";
 
 const CompList = {
   button: Button,
   form: Form,
+  header: Header,
+  footer: Footer,
 };
 
-function Components({block}) {
+function Components({ block }) {
   const ctx = useContext(AppContext);
 
   /* create block */

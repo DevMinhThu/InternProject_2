@@ -13,6 +13,16 @@ const ComponentContextProvider = ({ props, children }) => {
         component: "button",
         headline: "Button",
       },
+      {
+        _uid: "BUY6Drn9e2",
+        component: "form",
+        headline: "Input",
+      },
+      {
+        _uid: "BUY6Drn9e3",
+        component: "header",
+        headline: "Header",
+      },
     ],
   });
 

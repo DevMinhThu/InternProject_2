@@ -1,12 +1,18 @@
 import React from "react";
+import { Input, Space } from "antd";
 
 function Form(props) {
   return (
-    <form onClick={props.onClick}>
-      <label>
-        <input type="text" name="name" placeholder={props.block.headline} />
-      </label>
-    </form>
+    <div>
+      <p style={{ color: "#fff", margin: "0px" }}>{props.block.title}</p>
+      <Space
+        style={{ margin: "10px" }}
+        direction="vertical"
+        onClick={props.onClick}
+      >
+        <Input.Password placeholder={props.block.headline} />
+      </Space>
+    </div>
   );
 }
 
