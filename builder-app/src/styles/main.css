@@ -1,0 +1,151 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+  scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+#editor {
+  background-color: #15181d;
+  height: 100vh;
+  padding: 100px;
+}
+
+#navbar {
+  background-color: #1c1e26;
+}
+
+#navbar .container-fluid {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.leftNav {
+  position: fixed;
+  top: 0;
+  width: 3%;
+  background-color: #1c1e26;
+  color: #fff;
+  height: 100vh;
+  display: inline-block;
+  text-align: center;
+}
+
+.styleIcon {
+  font-size: 20px;
+  color: #939499;
+  cursor: pointer;
+}
+
+.sidenav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 20%;
+  height: 100vh;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  background-color: rgba(255, 255, 255, 0.95);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.sidenav .logo {
+  border-bottom: 1px solid rgba(247, 240, 240, 0.3);
+  -webkit-text-decoration: uppercase;
+          text-decoration: uppercase;
+  font-size: 25px;
+  font-weight: 500;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #1ba9c7;
+}
+
+.sidenav .pages {
+  height: 100px;
+  overflow: scroll;
+  overflow-x: hidden;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.sidenav .pages .list-group-item {
+  background-color: #1c1e26;
+  color: #fff;
+}
+
+.sidenav .nav-link {
+  padding: 5px 15px;
+}
+
+.sidenav .nav {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #1c1e26;
+  border: 0;
+  padding: 10px;
+}
+
+.sidenav .nav .bi {
+  color: #949294;
+}
+
+.sidenav .nav .active {
+  background-color: #1ba9c7;
+  border: 0;
+  border-radius: 6px;
+}
+
+.sidenav .nav .active .bi {
+  color: #fff;
+}
+
+.bi-pencil-fill {
+  margin-right: 10px;
+}
+
+.main-content {
+  position: relative;
+  width: 77%;
+  left: 3%;
+}
+
+.main-content #block {
+  height: 100%;
+}
+
+.main-content #block #blocks {
+  height: 100%;
+}
+
+.main-content .navbar {
+  background-color: #1a1b20;
+}
+
+.main-content .name_project {
+  color: #fff;
+  font-weight: 600;
+}
+
+.tab-content {
+  margin-top: 15px;
+  padding: 10px;
+}
+/*# sourceMappingURL=main.css.map */
