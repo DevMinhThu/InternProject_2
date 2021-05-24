@@ -8,6 +8,7 @@ const Components = {
 };
 
 function index(block) {
+  // console.log("Block in render", block);
   /* create block */
   if (typeof Components[block.component] !== "undefined") {
     return React.createElement(Components[block.component], {

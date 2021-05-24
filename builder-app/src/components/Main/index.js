@@ -5,24 +5,7 @@ import "../../styles/main.scss";
 function Main(props) {
   // load context
   const { getData, dataComponents } = useContext(ComponentContext);
-  console.log(dataComponents);
-
-  const [inputValues, setInputValues] = useState({
-    headline: "",
-  });
-
-  const onHandleChange = (event) => {
-    const target = event.target;
-    const name = target.name;
-
-    setInputValues({ ...inputValues, [name]: target.value });
-  };
-
-  const onHandleSubmit = (event) => {
-    event.preventDefault();
-    console.log("state: ", inputValues);
-    
-  };
+  // console.log(dataComponents);
 
   return (
     <div className="main-content">
@@ -35,21 +18,7 @@ function Main(props) {
           </div>
         </div>
       </nav>
-      <div id="editor">
-        <form onSubmit={onHandleSubmit}>
-          <input
-            type="text"
-            name="headline"
-            onChange={onHandleChange}
-            value={inputValues.headline}
-            placeholder="Enter headline..."
-          />
-          <button type="submit" className="btn btn-primary">
-            Save
-          </button>
-        </form>
-        {getData()}
-      </div>
+      <div id="editor">{getData()}</div>
     </div>
   );
 }

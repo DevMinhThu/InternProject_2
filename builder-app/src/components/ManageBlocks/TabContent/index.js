@@ -22,9 +22,7 @@ function TabContent() {
         <Panel header={<Text title="Button" />} key="1" className="demo">
           {getData()}
         </Panel>
-        <Panel header={<Text title="Footer" />} key="2">
-          {/* <p>{text}</p> */}
-        </Panel>
+        <Panel header={<Text title="Footer" />} key="2"></Panel>
         <Panel header={<Text title="Header" />} key="3"></Panel>
         <Panel header={<Text title="Radio" />} key="4"></Panel>
         <Panel header={<Text title="SearchBar" />} key="5"></Panel>

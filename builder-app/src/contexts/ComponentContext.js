@@ -12,6 +12,11 @@ const data = {
       component: "button_key",
       headline: "Ios Btn",
     },
+    // {
+    //   _uid: "BUY6Drn9e2",
+    //   component: "form_key",
+    //   headline: "Form",
+    // },
   ],
 };
 
@@ -26,10 +31,19 @@ const ComponentContextProvider = ({ children }) => {
     });
   };
 
+  // get data in TabOptions
+  const getDataInTab = (data) => {
+    setDataComponents({
+      ...dataComponents,
+      headline: data.headline,
+    });
+  };
+
   // === context data ===
   const componentContextData = {
     dataComponents,
     getData,
+    getDataInTab,
   };
 
   // === return provider ===
