@@ -2,10 +2,10 @@ import React, { useContext } from "react";
 
 import { AppContext } from "../contexts/app-context";
 
-import Button from "./components/Button";
-import Footer from "./components/Footer";
-import Form from "./components/Form";
-import Header from "./components/Header";
+import Button from "./CompList/Button";
+import Footer from "./CompList/Footer";
+import Form from "./CompList/Form";
+import Header from "./CompList/Header";
 
 const CompList = {
   button: Button,

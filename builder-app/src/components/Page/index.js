@@ -1,11 +1,8 @@
-import React, { useState, useContext } from "react";
-import { ComponentContext } from "../../contexts/ComponentContext";
+import React from "react";
 import "../../styles/main.scss";
+import Components from "../../Handler/components";
 
-function Main(props) {
-  // load context
-  const { getData } = useContext(ComponentContext);
-
+function Page(props) {
   return (
     <div className="main-content">
       <nav className="navbar navbar-light">
@@ -35,13 +32,13 @@ function Main(props) {
             }}
           >
             <div style={container}>
-              <i style={icon} class="bi bi-three-dots" />
+              <i style={icon} className="bi bi-three-dots" />
               Vina
-              <i style={icon} class="bi bi-wifi-2" />
+              <i style={icon} className="bi bi-wifi-2" />
             </div>
             <div style={container}>9:41 AM</div>
             <div style={container}>
-              100% <i style={icon} class="bi bi-battery-full" />
+              100% <i style={icon} className="bi bi-battery-full" />
             </div>
           </div>
           <div
@@ -53,7 +50,9 @@ function Main(props) {
               height: "95%",
             }}
           >
-            {getData()}
+            {props.content.body.map((block) => {
+              return <Components key={block._uid} block={block} />;
+            })}
           </div>
         </div>
       </div>
@@ -73,4 +72,4 @@ const container = {
   width: "50%",
 };
 
-export default Main;
+export default Page;
