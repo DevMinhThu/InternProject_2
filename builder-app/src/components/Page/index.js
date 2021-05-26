@@ -1,6 +1,6 @@
 import React from "react";
 import "../../styles/main.scss";
-import Components from "../../Handler/components";
+import Components from "../../handler/components";
 
 function Page(props) {
   return (

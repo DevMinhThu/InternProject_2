@@ -1,7 +1,7 @@
 import { Tabs } from "antd";
 import "antd/dist/antd.css";
 import React, { useState } from "react";
-import Components from "../../Handler/components";
+import Components from "../../handler/components";
 import "../../styles/main.scss";
 
 const { TabPane } = Tabs;
