@@ -23,13 +23,21 @@ function App() {
         title: "Component button",
         component: "button",
         headline: "Button",
+        children: [
+          {
+            _uid: "BUY6Drn9e2",
+            title: "Component input",
+            component: "form",
+            headline: "Input",
+          },
+        ],
       },
-      {
-        _uid: "BUY6Drn9e2",
-        title: "Component input",
-        component: "form",
-        headline: "Input",
-      },
+      // {
+      //   _uid: "BUY6Drn9e2",
+      //   title: "Component input",
+      //   component: "form",
+      //   headline: "Input",
+      // },
       {
         _uid: "BUY6Drn9e3",
         title: "Component header",

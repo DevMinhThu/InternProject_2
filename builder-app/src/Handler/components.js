@@ -19,13 +19,23 @@ function Components({ block }) {
 
   /* create block */
   if (typeof CompList[block.component] !== "undefined") {
-    return React.createElement(CompList[block.component], {
-      key: block._uid,
-      block: block,
-      onClick: () => {
-        ctx.setSelectedComp(block);
+    return React.createElement(
+      CompList[block.component],
+      {
+        key: block._uid,
+        block: block,
+        onClick: (event) => {
+          ctx.setSelectedComp(block);
+          console.log(block.headline);
+          event.stopPropagation();
+          event.preventDefault();
+        },
       },
-    });
+      block.children &&
+        (typeof block.children === "string"
+          ? block.children
+          : block.children.map((c) => Components({ block: c })))
+    );
   }
 
   return React.createElement(
