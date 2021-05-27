@@ -9,6 +9,12 @@ const { TabPane } = Tabs;
 function TabOptions(props) {
   const [size] = useState("large");
 
+  //* handle change input
+  const onChange = (event) => {
+    props.selectedComp.headline = event.target.value;
+    props.forceUpdate(!props.update);
+  };
+
   return (
     <Tabs style={tabs} type="line" size={size} centered>
       <TabPane style={style} tab={<i className="bi bi-grid-fill" />} key="1">
@@ -23,10 +29,7 @@ function TabOptions(props) {
         <input
           placeholder="value..."
           value={props.selectedComp.headline}
-          onChange={(event) => {
-            props.selectedComp.headline = event.target.value;
-            props.forceUpdate(!props.update);
-          }}
+          onChange={onChange}
         />
       </TabPane>
       <TabPane style={style} tab={<i className="bi bi-palette-fill" />} key="3">

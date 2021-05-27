@@ -17,9 +17,9 @@ function Page(props) {
       <div id="editor">
         <div
           style={{
-            width: "320px",
+            width: "330px",
             backgroundColor: "#fff",
-            height: "640px",
+            height: "650px",
           }}
         >
           <div

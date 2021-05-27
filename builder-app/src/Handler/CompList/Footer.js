@@ -15,6 +15,7 @@ function Footer(props) {
           height: "30px",
           padding: "5px",
           margin: "10px",
+          border: "0.5px solid #ddd",
         }}
         onClick={props.onClick}
       >

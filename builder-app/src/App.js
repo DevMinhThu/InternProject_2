@@ -18,29 +18,25 @@ function App() {
     body: [
       {
         _uid: "BUY6Drn9e1",
-        title: "Component button",
-        component: "button",
-        headline: "Button",
+        component: "header",
+        headline: "header",
         children: [
           {
             _uid: "BUY6Drn9e2",
-            title: "Component input",
             component: "form",
-            headline: "Input",
+            headline: "form",
           },
         ],
       },
       {
-        _uid: "BUY6Drn9e3",
-        title: "Component header",
-        component: "header",
-        headline: "Header",
+        _uid: "BUY6Drn9e4",
+        component: "button",
+        headline: "Button",
       },
       {
-        _uid: "BUY6Drn9e4",
-        title: "Component footer",
+        _uid: "BUY6Drn9e5",
         component: "footer",
-        headline: "Footer",
+        headline: "footer",
       },
     ],
   });
