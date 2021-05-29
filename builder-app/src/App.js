@@ -6,6 +6,7 @@ import Logo from "./components/Logo";
 import Page from "./components/Page";
 import TabOptions from "./components/TabOptions";
 import LeftNav from "./components/LeftNav";
+// import Component from "./handler/components";
 
 // context
 import { AppContext } from "./contexts/app-context";

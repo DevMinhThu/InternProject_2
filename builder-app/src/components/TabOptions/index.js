@@ -1,7 +1,7 @@
 import { Tabs } from "antd";
 import "antd/dist/antd.css";
 import React, { useState } from "react";
-import Components from "../../handler/components";
+import Component from "../../handler/components";
 import "../../styles/main.scss";
 
 const { TabPane } = Tabs;
@@ -19,7 +19,7 @@ function TabOptions(props) {
     <Tabs style={tabs} type="line" size={size} centered>
       <TabPane style={style} tab={<i className="bi bi-grid-fill" />} key="1">
         {props.content.body.map((block) => {
-          return <Components key={block._uid} block={block} />;
+          return <Component key={block._uid} block={block} />;
         })}
       </TabPane>
       <TabPane style={style} tab={<i className="bi bi-layers-fill" />} key="2">

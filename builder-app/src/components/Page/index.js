@@ -1,6 +1,6 @@
 import React from "react";
 import "../../styles/main.scss";
-import Components from "../../handler/components";
+import Component from "../../handler/components";
 
 function Page(props) {
   return (
@@ -51,7 +51,7 @@ function Page(props) {
             }}
           >
             {props.content.body.map((block) => {
-              return <Components key={block._uid} block={block} />;
+              return <Component key={block._uid} block={block} />;
             })}
           </div>
         </div>

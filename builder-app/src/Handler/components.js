@@ -14,10 +14,11 @@ const CompList = {
   footer: Footer,
 };
 
-function Components({ block }) {
+function Component({ block }) {
+  console.log("Components: ", block);
+
   const ctx = useContext(AppContext);
 
-  /* create block */
   if (typeof CompList[block.component] !== "undefined") {
     return React.createElement(
       CompList[block.component],
@@ -34,14 +35,13 @@ function Components({ block }) {
       block.children &&
         (typeof block.children === "string"
           ? block.children
-          : block.children.map((c) => Components({ block: c })))
+          : block.children.map((c) => Component({ block: c })))
     );
   }
-
   return React.createElement(
     () => <div>The component {block.component} has not been created yet.</div>,
     { key: block._uid }
   );
 }
 
-export default Components;
+export default Component;

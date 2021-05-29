@@ -20,13 +20,13 @@ function Footer(props) {
         onClick={props.onClick}
       >
         <div>
-          <i class="bi bi-chat-dots" />
+          <i className="bi bi-chat-dots" />
         </div>
         <div>
-          <i class="bi bi-heart-fill" />
+          <i className="bi bi-heart-fill" />
         </div>
         <div>
-          <i class="bi bi-bell" />
+          <i className="bi bi-bell" />
         </div>
       </div>
     </div>

@@ -20,12 +20,13 @@ function Header(props) {
         onClick={props.onClick}
       >
         <div>
-          <i class="bi bi-chevron-left" />
+          <i className="bi bi-chevron-left" />
           Back
         </div>
         <div>{props.block.headline}</div>
         <div>Action</div>
       </div>
+      {props.children}
     </div>
   );
 }
