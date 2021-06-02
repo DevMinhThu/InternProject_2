@@ -1,5 +1,5 @@
 import React from "react";
-import Component from "../../handler/components";
+import Component from "../../Handler/components";
 import SideBar from "./Sidebar";
 
 function Page(props) {
