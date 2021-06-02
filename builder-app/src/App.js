@@ -1,17 +1,8 @@
+import "antd/dist/antd.css";
 import React, { useState } from "react";
-import AddPage from "./components/AddPage";
-
-// import components
-import Logo from "./components/Logo";
+import NavBar from "./components/Navbar";
 import Page from "./components/Page";
-import TabOptions from "./components/TabOptions";
-import LeftNav from "./components/LeftNav";
-// import Component from "./handler/components";
-
-// context
 import { AppContext } from "./contexts/app-context";
-
-// main style
 import "./styles/main.scss";
 
 function App() {
@@ -48,25 +39,16 @@ function App() {
   return (
     <div className="App">
       <AppContext.Provider value={{ forceUpdate, setSelectedComp }}>
-        <LeftNav />
+        {/* navbar */}
+        <NavBar />
+
+        {/* main_content */}
         <Page
           content={content}
           selectedComp={selectedComp}
           update={update}
           forceUpdate={forceUpdate}
         />
-
-        {/* sidenav */}
-        <div id="navbar" className="sidenav flex-column overflow-scroll">
-          <Logo />
-          <AddPage />
-          <TabOptions
-            content={content}
-            selectedComp={selectedComp}
-            update={update}
-            forceUpdate={forceUpdate}
-          />
-        </div>
       </AppContext.Provider>
     </div>
   );
