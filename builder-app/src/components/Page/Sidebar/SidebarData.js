@@ -20,6 +20,11 @@ export const SidebarData = [
         path: "/overview/revenue",
         icon: <IoIcons.IoIosPaper />,
       },
+      {
+        _uid: "BUY6Drn9e4",
+        component: "button",
+        headline: "Button",
+      },
     ],
   },
   {

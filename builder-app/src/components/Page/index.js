@@ -1,7 +1,8 @@
 import React from "react";
-import Component from "../../Handler/components";
-import SideBar from "./Sidebar";
 import { BrowserRouter as Router } from "react-router-dom";
+import Editor from "./Editor";
+import SideBar from "./Sidebar";
+import Toolkit from "./Toolkit";
 
 function Page(props) {
   return (
@@ -15,66 +16,11 @@ function Page(props) {
         />
       </Router>
 
-      <div className="editor_container">
-        <div className="editor">
-          <div
-            style={{
-              width: "300px",
-              backgroundColor: "#fff",
-              height: "540px",
-            }}
-          >
-            <div
-              className="notification"
-              style={{
-                display: "flex",
-                height: "5%",
-                justifyContent: "space-around",
-                fontSize: "13px",
-              }}
-            >
-              <div style={container}>
-                <i style={icon} className="bi bi-three-dots" />
-                Vina
-                <i style={icon} className="bi bi-wifi-2" />
-              </div>
-              <div style={container}>9:41 AM</div>
-              <div style={container}>
-                100% <i style={icon} className="bi bi-battery-full" />
-              </div>
-            </div>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-                height: "95%",
-              }}
-            >
-              {props.content.body.map((block) => {
-                return <Component key={block._uid} block={block} />;
-              })}
-            </div>
-          </div>
-        </div>
-      </div>
+      <Editor content={props.content} />
 
-      <div className="tool_config"></div>
+      <Toolkit content={props.content} />
     </div>
   );
 }
-
-const icon = {
-  fontSize: "18px",
-  margin: "3px",
-};
-
-const container = {
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  width: "50%",
-};
 
 export default Page;
