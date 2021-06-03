@@ -68,6 +68,45 @@ html {
   padding: 15px;
 }
 
+.component_library .ant-drawer-wrapper-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  width: 100%;
+  height: 100%;
+  background: #1c1e26;
+}
+
+.component_library .ant-tree-list-holder-inner {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background: #1c1e26;
+  color: #f0f0f0;
+}
+
+.component_library .ant-drawer-header {
+  position: relative;
+  padding: 16px 24px;
+  color: rgba(0, 0, 0, 0.85);
+  background: #1c1e26;
+  border-radius: 2px 2px 0 0;
+}
+
+.component_library .ant-drawer-title {
+  margin: 0;
+  color: #f0f0f0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+}
+
 .editor_container {
   background-color: #15181d;
   width: 76.5%;

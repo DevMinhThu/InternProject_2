@@ -2,6 +2,7 @@ import "antd/dist/antd.css";
 import React, { useState } from "react";
 import NavBar from "./components/Navbar";
 import Page from "./components/Page";
+// import SideBar from "./components/Page/Sidebar";
 import { AppContext } from "./contexts/app-context";
 import "./styles/main.scss";
 

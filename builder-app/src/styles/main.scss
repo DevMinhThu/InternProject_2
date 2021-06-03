@@ -4,7 +4,7 @@ body {
 }
 
 .App {
-    margin-top: 47px;
+    margin-top: 44px;
 }
 
 html {
@@ -22,6 +22,7 @@ html {
     background-color: #1c1e26;
     border-bottom: 1px solid black;
     position: fixed;
+    height: 45px;
     width: 100%;
     top: 0;
 
@@ -44,21 +45,52 @@ html {
 
 // component_library
 .component_library {
-    background-color: #1c1e26;
-    width: 3.5%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: fixed;
-    left: 0;
-    height: 100vh;
-    border-top: 1px solid black;
+    // background-color: #1c1e26;
+    // width: 3.5%;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // position: fixed;
+    // left: 0;
+    // height: 100vh;
+    // border-top: 1px solid black;
 
     .styleIcon {
         font-size: 20px;
         color: #939499;
         cursor: pointer;
         padding: 15px;
+    }
+
+    .ant-drawer-wrapper-body {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 100%;
+        height: 100%;
+        background: #1c1e26;
+    }
+
+    .ant-tree-list-holder-inner {
+        align-items: flex-start;
+        background: #1c1e26;
+        color: #f0f0f0;
+    }
+
+    .ant-drawer-header {
+        position: relative;
+        padding: 16px 24px;
+        color: rgba(0, 0, 0, 0.85);
+        background: #1c1e26;
+        border-radius: 2px 2px 0 0;
+    }
+
+    .ant-drawer-title {
+        margin: 0;
+        color: #f0f0f0;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
     }
 }
 
@@ -105,65 +137,65 @@ html {
 // }
 
 //.sidenav {
-    // position: fixed;
-    // top: 0;
-    // left: 0;
-    // right: 0;
-    // width: 20%;
-    // height: 100vh;
-    // overflow: scroll;
-    // -ms-overflow-style: none;
-    // overflow-x: hidden;
-    // scrollbar-width: none;
-    // background-color: rgba(255, 255, 255, 0.95);
-    // transition: 0.5s;
-    // box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
-    // border: 1px solid rgba(0, 0, 0, 0.3);
+// position: fixed;
+// top: 0;
+// left: 0;
+// right: 0;
+// width: 20%;
+// height: 100vh;
+// overflow: scroll;
+// -ms-overflow-style: none;
+// overflow-x: hidden;
+// scrollbar-width: none;
+// background-color: rgba(255, 255, 255, 0.95);
+// transition: 0.5s;
+// box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+// border: 1px solid rgba(0, 0, 0, 0.3);
 
-    // .logo {
-    //     border-bottom: 1px solid rgba(247, 240, 240, 0.3);
-    //     text-decoration: uppercase;
-    //     font-size: 25px;
-    //     font-weight: 500;
-    //     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-    //     color: #1ba9c7;
-    // }
+// .logo {
+//     border-bottom: 1px solid rgba(247, 240, 240, 0.3);
+//     text-decoration: uppercase;
+//     font-size: 25px;
+//     font-weight: 500;
+//     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+//     color: #1ba9c7;
+// }
 
-    // .pages {
-    //     height: 100px;
-    //     overflow: scroll;
-    //     overflow-x: hidden;
-    //     margin-top: 30px;
-    //     margin-bottom: 30px;
+// .pages {
+//     height: 100px;
+//     overflow: scroll;
+//     overflow-x: hidden;
+//     margin-top: 30px;
+//     margin-bottom: 30px;
 
-    //     .list-group-item {
-    //         background-color: #1c1e26;
-    //         color: #fff;
-    //     }
-    // }
+//     .list-group-item {
+//         background-color: #1c1e26;
+//         color: #fff;
+//     }
+// }
 
-    // .nav-link {
-    //     padding: 5px 15px;
-    // }
+// .nav-link {
+//     padding: 5px 15px;
+// }
 
-    // nav tab option
-    // .nav {
-    //     justify-content: space-between;
-    //     background-color: #1c1e26;
-    //     border: 0;
-    //     padding: 10px;
-    //     .bi {
-    //         color: #949294;
-    //     }
-    //     .active {
-    //         background-color: #1ba9c7;
-    //         border: 0;
-    //         border-radius: 6px;
-    //         .bi {
-    //             color: #fff;
-    //         }
-    //     }
-    // }
+// nav tab option
+// .nav {
+//     justify-content: space-between;
+//     background-color: #1c1e26;
+//     border: 0;
+//     padding: 10px;
+//     .bi {
+//         color: #949294;
+//     }
+//     .active {
+//         background-color: #1ba9c7;
+//         border: 0;
+//         border-radius: 6px;
+//         .bi {
+//             color: #fff;
+//         }
+//     }
+// }
 //}
 
 // .bi-pencil-fill {

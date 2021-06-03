@@ -1,16 +1,19 @@
 import React from "react";
 import Component from "../../Handler/components";
 import SideBar from "./Sidebar";
+import { BrowserRouter as Router } from "react-router-dom";
 
 function Page(props) {
   return (
     <div className="main_container">
-      <SideBar
-        content={props.content}
-        selectedComp={props.selectedComp}
-        update={props.update}
-        forceUpdate={props.forceUpdate}
-      />
+      <Router>
+        <SideBar
+          content={props.content}
+          selectedComp={props.selectedComp}
+          update={props.update}
+          forceUpdate={props.forceUpdate}
+        />
+      </Router>
 
       <div className="editor_container">
         <div className="editor">

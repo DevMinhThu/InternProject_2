@@ -1,72 +1,75 @@
-import { Drawer, Popover, Tree } from "antd";
+import { Tooltip } from "antd";
 import React, { useState } from "react";
+import * as BsIcons from "react-icons/bs";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import { SidebarData } from "./SidebarData";
+import SubMenu from "./SubMenu";
 
-const treeData = [
-  {
-    title: "parent 1",
-    key: "0-0",
-    children: [
-      {
-        title: "parent 1-0",
-        key: "0-0-0",
-        children: [
-          {
-            title: "leaf",
-            key: "0-0-0-0",
-          },
-        ],
-      },
-      {
-        title: "parent 1-1",
-        key: "0-0-1",
-        children: [
-          {
-            title: <span style={{ color: "#1890ff" }}>sss</span>,
-            key: "0-0-1-0",
-          },
-        ],
-      },
-    ],
-  },
-];
+const Nav = styled.div`
+  background-color: #1c1e26;
+  width: 3.5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  height: 100vh;
+  border-top: 1px solid black;
+`;
 
-function SideBar() {
-  const [state, setState] = useState({ visible: false });
+const NavIcon = styled(Link)`
+  font-size: 18px;
+  height: 60px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #939499;
+`;
 
-  const showDrawer = () => {
-    setState({
-      visible: !state.visible,
-    });
-  };
+const SidebarNav = styled.nav`
+  background: #1c1e26;
+  width: 230px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 15;
+  left: ${({ sidebar }) => (sidebar ? "3.5%" : "-100%")};
+  z-index: 10;
+  border-top: 1px solid black;
+`;
 
-  const onClose = () => {
-    setState({
-      visible: false,
-    });
-  };
+const SidebarWrap = styled.div`
+  width: 100%;
+`;
+
+function Sidebar() {
+  const [sidebar, setSidebar] = useState(false);
+
+  const showSidebar = () => setSidebar(!sidebar);
 
   return (
-    <div className="component_library">
-      <Popover placement="right" content={"Layers"}>
-        <i className="bi styleIcon bi-layers-half" />
-      </Popover>
-
-      <i className="bi styleIcon bi-grid" onClick={showDrawer}>
-        <Drawer
-          title="Library"
-          placement="left"
-          closable={false}
-          onClose={onClose}
-          visible={state.visible}
-          key={state.placement}
-          getContainer={false}
-          style={{ position: "absolute" }}
-        >
-          <Tree treeData={treeData} />
-        </Drawer>
-      </i>
-    </div>
+    <>
+      <Nav>
+        <NavIcon to="#">
+          <Tooltip placement="right" title={"Layers"}>
+            <BsIcons.BsLayersHalf />
+          </Tooltip>
+        </NavIcon>
+        <NavIcon to="#">
+          <BsIcons.BsColumnsGap onClick={showSidebar} />
+        </NavIcon>
+      </Nav>
+      <SidebarNav sidebar={sidebar}>
+        <SidebarWrap>
+          {SidebarData.map((item, index) => {
+            return <SubMenu item={item} key={index} />;
+          })}
+        </SidebarWrap>
+      </SidebarNav>
+    </>
   );
 }
 
-export default SideBar;
+export default Sidebar;
