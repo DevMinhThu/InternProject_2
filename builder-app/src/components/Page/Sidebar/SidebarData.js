@@ -11,19 +11,14 @@ export const SidebarData = [
 
     subNav: [
       {
-        title: "Users",
-        path: "/overview/users",
+        title: "Button IOS",
+        path: "/comp/button_ios",
         icon: <IoIcons.IoIosPaper />,
       },
       {
-        title: "Revenue",
-        path: "/overview/revenue",
+        title: "Button Android",
+        path: "/comp/button_android",
         icon: <IoIcons.IoIosPaper />,
-      },
-      {
-        _uid: "BUY6Drn9e4",
-        component: "button",
-        headline: "Button",
       },
     ],
   },
@@ -35,20 +30,8 @@ export const SidebarData = [
 
     subNav: [
       {
-        title: "Reports",
-        path: "/reports/reports1",
-        icon: <IoIcons.IoIosPaper />,
-        cName: "sub-nav",
-      },
-      {
-        title: "Reports 2",
-        path: "/reports/reports2",
-        icon: <IoIcons.IoIosPaper />,
-        cName: "sub-nav",
-      },
-      {
-        title: "Reports 3",
-        path: "/reports/reports3",
+        title: "Header",
+        path: "/comp/header",
         icon: <IoIcons.IoIosPaper />,
       },
     ],
