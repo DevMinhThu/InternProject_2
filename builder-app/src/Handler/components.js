@@ -15,7 +15,7 @@ const CompList = {
 };
 
 function Component({ block }) {
-  console.log("Components: ", block);
+  // console.log("Components: ", block);
 
   const ctx = useContext(AppContext);
 

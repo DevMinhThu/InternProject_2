@@ -13,6 +13,7 @@ function App() {
         _uid: "BUY6Drn9e1",
         component: "header",
         headline: "header",
+        group: "subNav",
         children: [
           {
             _uid: "BUY6Drn9e2",
@@ -25,11 +26,13 @@ function App() {
         _uid: "BUY6Drn9e4",
         component: "button",
         headline: "Button",
+        group: "subNav",
       },
       {
         _uid: "BUY6Drn9e5",
         component: "footer",
         headline: "footer",
+        group: "subNav",
       },
     ],
   });

@@ -11,7 +11,7 @@ function Footer(props) {
           display: "flex",
           justifyContent: "space-around",
           alignItems: "center",
-          width: "250px",
+          width: "200px",
           height: "30px",
           padding: "5px",
           margin: "10px",

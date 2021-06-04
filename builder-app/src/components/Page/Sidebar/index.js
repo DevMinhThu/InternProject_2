@@ -47,7 +47,7 @@ const SidebarWrap = styled.div`
 `;
 
 function Sidebar(props) {
-  console.log("Sidebar", props)
+  console.log("Sidebar", props);
   const [sidebar, setSidebar] = useState(false);
   const [checkSidebar, setCheckSidebar] = useState(false);
 
@@ -71,7 +71,7 @@ function Sidebar(props) {
       <SidebarNav sidebar={sidebar}>
         <SidebarWrap>
           {SidebarData.map((item, index) => {
-            return <SubMenu item={item} key={index} comp={item.component} />;
+            return <SubMenu item={item} key={index} content={props.content} />;
           })}
         </SidebarWrap>
       </SidebarNav>

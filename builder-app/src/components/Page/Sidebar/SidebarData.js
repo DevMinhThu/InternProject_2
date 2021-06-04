@@ -39,9 +39,29 @@ export const SidebarData = [
   {
     title: "FormInputs",
     path: "/form",
+    iconClosed: <RiIcons.RiArrowDownSFill />,
+    iconOpened: <RiIcons.RiArrowUpSFill />,
+
+    subNav: [
+      {
+        title: "Form",
+        path: "/comp/form",
+        icon: <IoIcons.IoIosPaper />,
+      },
+    ],
   },
   {
     title: "Footer",
     path: "/footer",
+    iconClosed: <RiIcons.RiArrowDownSFill />,
+    iconOpened: <RiIcons.RiArrowUpSFill />,
+
+    subNav: [
+      {
+        title: "Footer",
+        path: "/comp/footer",
+        icon: <IoIcons.IoIosPaper />,
+      },
+    ],
   },
 ];

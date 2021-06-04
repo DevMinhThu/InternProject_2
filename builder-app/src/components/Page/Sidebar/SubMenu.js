@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import Component from "../../../Handler/components";
 
 const SidebarLink = styled(Link)`
   display: flex;
@@ -31,15 +32,15 @@ const DropdownLink = styled(Link)`
   &:hover {
     background: #632ce4;
     cursor: pointer;
-    color: #fff
+    color: #fff;
   }
 `;
 
-const SubMenu = ({ item }) => {
+const SubMenu = ({ item, content }) => {
   const [subnav, setSubnav] = useState(false);
 
   const showSubnav = () => setSubnav(!subnav);
-
+  // console.log("SubMenu", content);
   return (
     <>
       <SidebarLink to={item.path} onClick={item.subNav && showSubnav}>
@@ -55,14 +56,21 @@ const SubMenu = ({ item }) => {
             : null}
         </div>
       </SidebarLink>
-      {subnav &&
+      {/* {subnav &&
         item.subNav.map((item, index) => {
           return (
             <DropdownLink to={item.path} key={index}>
               {item.icon}
               <SidebarLabel>{item.title}</SidebarLabel>
+              {content.body.map((block) => (
+                <Component block={block} />
+              ))}
             </DropdownLink>
           );
+        })} */}
+      {subnav &&
+        content.body.map((block) => {
+          return <Component block={block} />;
         })}
     </>
   );
