@@ -4,21 +4,26 @@ import Editor from "./Editor";
 import SideBar from "./Sidebar";
 import Toolkit from "./Toolkit";
 
-function Page(props) {
+function Page({ content, selectedComp, update, forceUpdate }) {
   return (
     <div className="main_container">
       <Router>
         <SideBar
-          content={props.content}
-          selectedComp={props.selectedComp}
-          update={props.update}
-          forceUpdate={props.forceUpdate}
+          content={content}
+          selectedComp={selectedComp}
+          update={update}
+          forceUpdate={forceUpdate}
         />
       </Router>
 
-      <Editor content={props.content} />
+      <Editor content={content} />
 
-      <Toolkit content={props.content} />
+      <Toolkit
+        content={content}
+        selectedComp={selectedComp}
+        update={update}
+        forceUpdate={forceUpdate}
+      />
     </div>
   );
 }

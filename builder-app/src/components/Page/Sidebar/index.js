@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import * as BsIcons from "react-icons/bs";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import Component from "../../../Handler/components";
 import { SidebarData } from "./SidebarData";
 import SubMenu from "./SubMenu";
 
@@ -46,8 +45,7 @@ const SidebarWrap = styled.div`
   width: 100%;
 `;
 
-function Sidebar(props) {
-  console.log("Sidebar", props);
+function Sidebar() {
   const [sidebar, setSidebar] = useState(false);
   const [checkSidebar, setCheckSidebar] = useState(false);
 
@@ -70,8 +68,8 @@ function Sidebar(props) {
       </Nav>
       <SidebarNav sidebar={sidebar}>
         <SidebarWrap>
-          {SidebarData.map((item, index) => {
-            return <SubMenu item={item} key={index} content={props.content} />;
+          {SidebarData().map((item, index) => {
+            return <SubMenu item={item} key={index} />;
           })}
         </SidebarWrap>
       </SidebarNav>

@@ -1,67 +1,76 @@
 import React from "react";
-import * as IoIcons from "react-icons/io";
 import * as RiIcons from "react-icons/ri";
 
-export const SidebarData = [
-  {
-    title: "Button",
-    path: "/button",
-    iconClosed: <RiIcons.RiArrowDownSFill />,
-    iconOpened: <RiIcons.RiArrowUpSFill />,
-
-    subNav: [
-      {
-        title: "Button IOS",
-        path: "/comp/button_ios",
-        icon: <IoIcons.IoIosPaper />,
-      },
-      {
-        title: "Button Android",
-        path: "/comp/button_android",
-        icon: <IoIcons.IoIosPaper />,
-      },
-    ],
-  },
-  {
-    title: "Header",
-    path: "/headers",
-    iconClosed: <RiIcons.RiArrowDownSFill />,
-    iconOpened: <RiIcons.RiArrowUpSFill />,
-
-    subNav: [
-      {
-        title: "Header",
-        path: "/comp/header",
-        icon: <IoIcons.IoIosPaper />,
-      },
-    ],
-  },
-  {
-    title: "FormInputs",
-    path: "/form",
-    iconClosed: <RiIcons.RiArrowDownSFill />,
-    iconOpened: <RiIcons.RiArrowUpSFill />,
-
-    subNav: [
-      {
-        title: "Form",
-        path: "/comp/form",
-        icon: <IoIcons.IoIosPaper />,
-      },
-    ],
-  },
-  {
-    title: "Footer",
-    path: "/footer",
-    iconClosed: <RiIcons.RiArrowDownSFill />,
-    iconOpened: <RiIcons.RiArrowUpSFill />,
-
-    subNav: [
-      {
-        title: "Footer",
-        path: "/comp/footer",
-        icon: <IoIcons.IoIosPaper />,
-      },
-    ],
-  },
-];
+export const SidebarData = () => {
+  return [
+    {
+      title: "Button",
+      path: "/button",
+      iconClosed: <RiIcons.RiArrowDownSFill />,
+      iconOpened: <RiIcons.RiArrowUpSFill />,
+      comps: [
+        {
+          _uid: "BUY6Drn9e4",
+          component: "button",
+          headline: "Button",
+          props: {
+            title: {
+              value: "header",
+              type: "String",
+            },
+            background: {
+              value: "blue",
+              type: "color",
+            },
+          },
+        },
+      ],
+    },
+    {
+      title: "Header",
+      path: "/headers",
+      iconClosed: <RiIcons.RiArrowDownSFill />,
+      iconOpened: <RiIcons.RiArrowUpSFill />,
+      comps: [
+        {
+          _uid: "BUY6Drn9e1",
+          component: "header",
+          headline: "header",
+          // children: [
+          //   {
+          //     _uid: "BUY6Drn9e2",
+          //     component: "form",
+          //     headline: "form",
+          //   },
+          // ],
+        },
+      ],
+    },
+    {
+      title: "FormInputs",
+      path: "/form",
+      iconClosed: <RiIcons.RiArrowDownSFill />,
+      iconOpened: <RiIcons.RiArrowUpSFill />,
+      comps: [
+        {
+          _uid: "BUY6Drn9e2",
+          component: "form",
+          headline: "form",
+        },
+      ],
+    },
+    {
+      title: "Footer",
+      path: "/footer",
+      iconClosed: <RiIcons.RiArrowDownSFill />,
+      iconOpened: <RiIcons.RiArrowUpSFill />,
+      comps: [
+        {
+          _uid: "BUY6Drn9e5",
+          component: "footer",
+          headline: "footer",
+        },
+      ],
+    },
+  ];
+};

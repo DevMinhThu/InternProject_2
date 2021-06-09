@@ -4,9 +4,8 @@ import { Input, Space } from "antd";
 function Form(props) {
   return (
     <div>
-      <p style={{ color: "#fff", margin: "0px" }}>{props.block.title}</p>
       <Space
-        style={{ margin: "10px" }}
+        style={{ margin: "5px" }}
         direction="vertical"
         onClick={props.onClick}
       >

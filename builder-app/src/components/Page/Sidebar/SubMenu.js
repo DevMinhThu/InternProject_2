@@ -20,57 +20,40 @@ const SidebarLabel = styled.span`
   margin-left: 5px;
 `;
 
-const DropdownLink = styled(Link)`
+const DropdownLink = styled.div`
   background: #414757;
-  height: 60px;
-  padding-left: 3rem;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: #f5f5f5;
-  font-size: 16px;
-  &:hover {
-    background: #632ce4;
-    cursor: pointer;
-    color: #fff;
-  }
+  text-align: center;
+  padding: 5px;
+  border-radius: 6px;
 `;
 
-const SubMenu = ({ item, content }) => {
-  const [subnav, setSubnav] = useState(false);
+const SubMenu = ({ item }) => {
+  const [subNav, setSubNav] = useState(false);
 
-  const showSubnav = () => setSubnav(!subnav);
-  // console.log("SubMenu", content);
+  const showSubNav = () => setSubNav(!subNav);
+
   return (
     <>
-      <SidebarLink to={item.path} onClick={item.subNav && showSubnav}>
+      <SidebarLink to={item.path} onClick={item.comps && showSubNav}>
         <div>
           {item.icon}
           <SidebarLabel>{item.title}</SidebarLabel>
         </div>
         <div>
-          {item.subNav && subnav
+          {item.comps && subNav
             ? item.iconOpened
-            : item.subNav
+            : item.comps
             ? item.iconClosed
             : null}
         </div>
       </SidebarLink>
-      {/* {subnav &&
-        item.subNav.map((item, index) => {
+      {subNav &&
+        item.comps.map((block, index) => {
           return (
-            <DropdownLink to={item.path} key={index}>
-              {item.icon}
-              <SidebarLabel>{item.title}</SidebarLabel>
-              {content.body.map((block) => (
-                <Component block={block} />
-              ))}
+            <DropdownLink key={index}>
+              <Component block={block} />
             </DropdownLink>
           );
-        })} */}
-      {subnav &&
-        content.body.map((block) => {
-          return <Component block={block} />;
         })}
     </>
   );
