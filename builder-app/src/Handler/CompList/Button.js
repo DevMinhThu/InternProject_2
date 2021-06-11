@@ -1,21 +1,24 @@
 import React from "react";
 
 function Button(props) {
+  console.log("button file", props);
   return (
     <div onClick={props.onClick}>
-      <button style={style}>{props.block.headline}</button>
+      <button
+        style={{
+          width: "100px",
+          height: "30px",
+          borderRadius: "5px",
+          border: 0,
+          color: "#fff",
+          backgroundColor: props.background,
+          margin: "5px",
+        }}
+      >
+        {props.title}
+      </button>
     </div>
   );
 }
-
-const style = {
-  width: "100px",
-  height: "36px",
-  borderRadius: "5px",
-  border: 0,
-  color: "#fff",
-  backgroundColor: "#E91E63",
-  margin: "5px",
-};
 
 export default Button;

@@ -1,5 +1,6 @@
 import React from "react";
 import Component from "../../../Handler/components";
+import { SidebarData } from "../Sidebar/SidebarData";
 
 function Editor(props) {
   return (
@@ -40,8 +41,11 @@ function Editor(props) {
               height: "95%",
             }}
           >
-            {props.content.body.map((block) => {
-              return <Component key={block._uid} block={block} />;
+            {SidebarData().map((block) => {
+              const item = block;
+              return item.comps.map((block, index) => {
+                return <Component key={index} block={block} />;
+              });
             })}
           </div>
         </div>

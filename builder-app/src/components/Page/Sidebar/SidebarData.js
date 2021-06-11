@@ -13,13 +13,13 @@ export const SidebarData = () => {
           _uid: "BUY6Drn9e4",
           component: "button",
           headline: "Button",
-          props: {
+          properties: {
             title: {
-              value: "header",
+              value: "Button",
               type: "String",
             },
             background: {
-              value: "blue",
+              value: "#E91E63",
               type: "color",
             },
           },
@@ -36,6 +36,16 @@ export const SidebarData = () => {
           _uid: "BUY6Drn9e1",
           component: "header",
           headline: "header",
+          properties: {
+            title: {
+              value: "Header",
+              type: "String",
+            },
+            background: {
+              value: "#3498db",
+              type: "color",
+            },
+          },
           // children: [
           //   {
           //     _uid: "BUY6Drn9e2",
@@ -56,6 +66,16 @@ export const SidebarData = () => {
           _uid: "BUY6Drn9e2",
           component: "form",
           headline: "form",
+          properties: {
+            title: {
+              value: "Form",
+              type: "String",
+            },
+            background: {
+              value: "#fff",
+              type: "color",
+            },
+          },
         },
       ],
     },
@@ -69,6 +89,16 @@ export const SidebarData = () => {
           _uid: "BUY6Drn9e5",
           component: "footer",
           headline: "footer",
+          properties: {
+            title: {
+              value: "Footer",
+              type: "String",
+            },
+            background: {
+              value: "orange",
+              type: "color",
+            },
+          },
         },
       ],
     },

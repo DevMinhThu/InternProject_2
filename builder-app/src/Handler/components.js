@@ -20,39 +20,30 @@ function Component({ block }) {
   const ctx = useContext(AppContext);
 
   if (typeof CompList[block.component] !== "undefined") {
-    // handle here
-    // props: {
-    //         title: {
-    //           value: "button",
-    //           type: "String",
-    //         },
-    //         background: {
-    //           value: "red",
-    //           type: "color",
-    //         },
-    //       }
-    //   // target convert props tren sang dang props duoi
-    //   props: {
-    //     title: "button",
-    //     background: "red",
-    //     onClick: ()=>{}
-    //   }
-
-    return React.createElement(
-      CompList[block.component],
-      // truyền props đã convert bên trên xuống đây để thay tham số thứ 2 của hàm createElement
-      // props,
-      {
+    // handle properties
+    const props = () => {
+      const res = {
         key: block._uid,
-        block: block,
-
         onClick: (event) => {
           ctx.setSelectedComp(block);
           console.log(block.headline);
           event.stopPropagation();
           event.preventDefault();
         },
-      },
+      };
+      const properties = block.properties;
+      for (let key in properties) {
+        if (properties.hasOwnProperty(key)) {
+          res[key] = properties[key].value;
+        }
+      }
+      return res;
+    };
+    console.log("POP", props());
+
+    return React.createElement(
+      CompList[block.component],
+      props(),
       block.children &&
         (typeof block.children === "string"
           ? block.children
