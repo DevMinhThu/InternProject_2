@@ -1,8 +1,7 @@
 import React from "react";
 import Component from "../../../Handler/components";
-import { SidebarData } from "../Sidebar/SidebarData";
 
-function Editor(props) {
+function Editor({ content, selectedComp, update, forceUpdate }) {
   return (
     <div className="editor_container">
       <div className="editor">
@@ -24,7 +23,7 @@ function Editor(props) {
           >
             <div style={container}>
               <i style={icon} className="bi bi-three-dots" />
-              Vina
+              VN
               <i style={icon} className="bi bi-wifi-2" />
             </div>
             <div style={container}>9:41 AM</div>
@@ -41,11 +40,8 @@ function Editor(props) {
               height: "95%",
             }}
           >
-            {SidebarData().map((block) => {
-              const item = block;
-              return item.comps.map((block, index) => {
-                return <Component key={index} block={block} />;
-              });
+            {content.body.map((block, index) => {
+              return <Component key={index} block={block} />;
             })}
           </div>
         </div>

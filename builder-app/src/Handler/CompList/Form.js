@@ -9,7 +9,7 @@ function Form(props) {
         direction="vertical"
         onClick={props.onClick}
       >
-        <Input.Password placeholder={props.title} />
+        <Input.Password style={{ width: "200px" }} placeholder={props.title} />
       </Space>
     </div>
   );

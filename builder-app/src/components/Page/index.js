@@ -3,6 +3,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import Editor from "./Editor";
 import SideBar from "./Sidebar";
 import Toolkit from "./Toolkit";
+// import { SidebarData } from "./Sidebar/SidebarData";
 
 function Page({ content, selectedComp, update, forceUpdate }) {
   return (
@@ -16,7 +17,12 @@ function Page({ content, selectedComp, update, forceUpdate }) {
         />
       </Router>
 
-      <Editor content={content} />
+      <Editor
+        content={content}
+        selectedComp={selectedComp}
+        update={update}
+        forceUpdate={forceUpdate}
+      />
 
       <Toolkit
         content={content}

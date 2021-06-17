@@ -1,5 +1,4 @@
 import { Tabs } from "antd";
-import "antd/dist/antd.css";
 import React, { useState } from "react";
 
 const { TabPane } = Tabs;

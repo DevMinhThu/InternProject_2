@@ -15,12 +15,18 @@ export const SidebarData = () => {
           headline: "Button",
           properties: {
             title: {
-              value: "Button",
+              value: "hello",
               type: "String",
             },
             background: {
               value: "#E91E63",
               type: "color",
+            },
+            width: {
+              value: "100px",
+            },
+            height: {
+              value: "30px",
             },
           },
         },

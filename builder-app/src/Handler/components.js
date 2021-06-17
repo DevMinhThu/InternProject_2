@@ -20,8 +20,8 @@ function Component({ block }) {
   const ctx = useContext(AppContext);
 
   if (typeof CompList[block.component] !== "undefined") {
-    // handle properties
-    const props = () => {
+    // handling properties for each component
+    const props = (properties) => {
       const res = {
         key: block._uid,
         onClick: (event) => {
@@ -31,7 +31,7 @@ function Component({ block }) {
           event.preventDefault();
         },
       };
-      const properties = block.properties;
+      // * get value in object properties
       for (let key in properties) {
         if (properties.hasOwnProperty(key)) {
           res[key] = properties[key].value;
@@ -39,11 +39,11 @@ function Component({ block }) {
       }
       return res;
     };
-    console.log("POP", props());
+    // console.log("POP", props());
 
     return React.createElement(
       CompList[block.component],
-      props(),
+      props(block.properties),
       block.children &&
         (typeof block.children === "string"
           ? block.children

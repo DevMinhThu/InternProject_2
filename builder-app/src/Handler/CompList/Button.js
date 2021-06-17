@@ -6,8 +6,8 @@ function Button(props) {
     <div onClick={props.onClick}>
       <button
         style={{
-          width: "100px",
-          height: "30px",
+          width: props.width,
+          height: props.height,
           borderRadius: "5px",
           border: 0,
           color: "#fff",

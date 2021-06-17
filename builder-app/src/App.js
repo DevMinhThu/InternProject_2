@@ -10,27 +10,68 @@ function App() {
   const [content] = useState({
     body: [
       {
-        _uid: "BUY6Drn9e1",
-        component: "header",
-        headline: "header",
-
-        children: [
-          {
-            _uid: "BUY6Drn9e2",
-            component: "form",
-            headline: "form",
-          },
-        ],
-      },
-      {
         _uid: "BUY6Drn9e4",
         component: "button",
-        headline: "Button",
+        properties: {
+          type: {
+            value: "primary",
+            type: "selection",
+            values: ["primary", "warning"],
+            max: 1,
+            min: 0,
+          },
+          title: {
+            value: "Button",
+            type: "String",
+          },
+          background: {
+            value: "#E91E63",
+            type: "color",
+          },
+          width: {
+            value: "100px",
+          },
+          height: {
+            value: "30px",
+          },
+        },
+      },
+      {
+        _uid: "BUY6Drn9e1",
+        component: "header",
+        properties: {
+          title: {
+            value: "Header",
+            type: "String",
+          },
+          background: {
+            value: "#3498db",
+            type: "color",
+          },
+        },
+
+        // children: [
+        //   {
+        //     _uid: "BUY6Drn9e2",
+        //     component: "form",
+        //     headline: "form",
+        //   },
+        // ],
       },
       {
         _uid: "BUY6Drn9e5",
         component: "footer",
         headline: "footer",
+        properties: {
+          title: {
+            value: "Footer",
+            type: "String",
+          },
+          background: {
+            value: "orange",
+            type: "color",
+          },
+        },
       },
     ],
   });
