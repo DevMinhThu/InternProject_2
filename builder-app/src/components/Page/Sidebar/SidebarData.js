@@ -23,10 +23,10 @@ export const SidebarData = () => {
               type: "color",
             },
             width: {
-              value: "100px",
+              value: "100",
             },
             height: {
-              value: "30px",
+              value: "30",
             },
           },
         },
@@ -101,7 +101,7 @@ export const SidebarData = () => {
               type: "String",
             },
             background: {
-              value: "orange",
+              value: "#3F51B5",
               type: "color",
             },
           },
