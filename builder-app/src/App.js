@@ -2,7 +2,6 @@ import "antd/dist/antd.css";
 import React, { useState } from "react";
 import NavBar from "./components/Navbar";
 import Page from "./components/Page";
-// import SideBar from "./components/Page/Sidebar";
 import { AppContext } from "./contexts/app-context";
 import "./styles/main.scss";
 
@@ -22,17 +21,23 @@ function App() {
           },
           title: {
             value: "Button",
-            type: "String",
+            type: "string",
+            des: "caption",
           },
           background: {
             value: "#E91E63",
             type: "color",
+            des: "BG",
           },
           width: {
-            value: "100px",
+            value: "100",
+            type: "string",
+            des: "W",
           },
           height: {
-            value: "30px",
+            value: "30",
+            type: "string",
+            des: "H",
           },
         },
       },
@@ -42,11 +47,13 @@ function App() {
         properties: {
           title: {
             value: "Header",
-            type: "String",
+            type: "string",
+            des: "caption",
           },
           background: {
-            value: "#3498db",
+            value: "#3F51B5",
             type: "color",
+            des: "BG",
           },
         },
 
@@ -65,11 +72,13 @@ function App() {
         properties: {
           title: {
             value: "Footer",
-            type: "String",
+            type: "string",
+            des: "caption",
           },
           background: {
-            value: "orange",
+            value: "#9013FE",
             type: "color",
+            des: "BG",
           },
         },
       },

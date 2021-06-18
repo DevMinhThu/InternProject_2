@@ -15,7 +15,7 @@ const CompList = {
 };
 
 function Component({ block }) {
-  console.log("Components: ", block);
+  // console.log("Components: ", block);
 
   const ctx = useContext(AppContext);
 
@@ -26,7 +26,7 @@ function Component({ block }) {
         key: block._uid,
         onClick: (event) => {
           ctx.setSelectedComp(block);
-          console.log(block.headline);
+          // console.log(block.headline);
           event.stopPropagation();
           event.preventDefault();
         },
@@ -39,7 +39,6 @@ function Component({ block }) {
       }
       return res;
     };
-    // console.log("POP", props());
 
     return React.createElement(
       CompList[block.component],
