@@ -29,7 +29,8 @@ function PropEditor({ key, property, forceUpdate, update, selectedComp }) {
         width: "40px",
         height: "25px",
         borderRadius: "5px",
-        background: `${color}`,
+        background: "#fff",
+        backgroundImage: "linear-gradient(to right, red , yellow)",
       },
       input: {
         background: "#343a40",
@@ -51,9 +52,9 @@ function PropEditor({ key, property, forceUpdate, update, selectedComp }) {
         <div style={styles.container}>
           <span style={styles.span}>{property.des}: </span>
           <input
-            style={styles.input}
             key={key}
             placeholder={key}
+            style={styles.input}
             value={property.value}
             onChange={(event) => {
               property.value = event.target.value;
@@ -69,7 +70,12 @@ function PropEditor({ key, property, forceUpdate, update, selectedComp }) {
           <div>
             <div style={styles.color} onClick={handleClick} />
             {displayColorPicker ? (
-              <SketchPicker color={color} onChange={handleChange} />
+              <SketchPicker
+                width={210}
+                color={color}
+                disableAlpha={true}
+                onChange={handleChange}
+              />
             ) : null}
           </div>
         </div>

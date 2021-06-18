@@ -22,7 +22,7 @@ function App() {
           title: {
             value: "Button",
             type: "string",
-            des: "caption",
+            des: "Caption",
           },
           background: {
             value: "#E91E63",
@@ -76,7 +76,7 @@ function App() {
             des: "caption",
           },
           background: {
-            value: "#9013FE",
+            value: "#A62DBE",
             type: "color",
             des: "BG",
           },
