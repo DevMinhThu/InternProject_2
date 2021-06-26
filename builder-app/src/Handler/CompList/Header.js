@@ -9,10 +9,9 @@ function Header(props) {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          width: "200px",
           height: "30px",
           padding: "5px",
-          margin: "5px",
+          margin: "5px 0px",
           color: "#fff",
         }}
         onClick={props.onClick}
@@ -33,19 +32,6 @@ const container = {
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
-  alignItems: "center",
 };
-
-// const styleHeader = {
-//   backgroundColor: "#3F51B5",
-//   display: "flex",
-//   justifyContent: "space-between",
-//   alignItems: "center",
-//   width: "200px",
-//   height: "30px",
-//   padding: "5px",
-//   margin: "5px",
-//   color: "#fff",
-// };
 
 export default Header;

@@ -35,9 +35,9 @@ function Editor({ content, selectedComp, update, forceUpdate }) {
             style={{
               display: "flex",
               flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "center",
+              alignItems: "stretch",
               height: "95%",
+              position: "relative",
             }}
           >
             {content.body.map((block, index) => {

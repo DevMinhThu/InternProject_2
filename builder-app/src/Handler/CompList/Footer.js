@@ -9,10 +9,8 @@ function Footer(props) {
         display: "flex",
         justifyContent: "space-around",
         alignItems: "center",
-        width: "200px",
         height: "30px",
-        margin: "5px",
-        border: "0.5px solid #ddd",
+        margin: "5px 0px",
       },
       icon: {
         color: "#fff",
@@ -23,13 +21,13 @@ function Footer(props) {
   return (
     <div style={styles.styleFooter} onClick={props.onClick}>
       <div>
-        <i style={styles.icon} className="bi bi-chat-dots" />
+        <i style={styles.icon} className={props.leftIcon} />
       </div>
       <div>
-        <i style={styles.icon} className="bi bi-heart-fill" />
+        <i style={styles.icon} className={props.centerIcon} />
       </div>
       <div>
-        <i style={styles.icon} className="bi bi-bell" />
+        <i style={styles.icon} className={props.rightIcon} />
       </div>
     </div>
   );

@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 import { SketchPicker } from "react-color";
 import reactCSS from "reactcss";
+import { icons } from "../../constants/icon";
 
 function PropEditor({ key, property, forceUpdate, update, selectedComp }) {
   console.log(property);
 
   const [color, setColor] = useState(selectedComp.background.value);
   const [displayColorPicker, setDisplayColorPicker] = useState(false);
+  const [openSelectIcon, setOpenSelectIcon] = useState(false);
 
+  // handling color picker
   const handleClick = () => {
     setDisplayColorPicker(!displayColorPicker);
   };
@@ -16,6 +19,13 @@ function PropEditor({ key, property, forceUpdate, update, selectedComp }) {
     setColor(color.hex);
     property.value = color.hex;
     forceUpdate(!update);
+  };
+
+  // handling icons picker
+  const handleChangeIcon = (icon) => {
+    property.value = icon;
+    forceUpdate(!update);
+    setOpenSelectIcon(false);
   };
 
   const styles = reactCSS({
@@ -43,6 +53,9 @@ function PropEditor({ key, property, forceUpdate, update, selectedComp }) {
         marginRight: "10px",
         marginBottom: "3px",
       },
+      icon: {
+        fontSize: "15px",
+      },
     },
   });
 
@@ -61,6 +74,29 @@ function PropEditor({ key, property, forceUpdate, update, selectedComp }) {
               forceUpdate(!update);
             }}
           />
+        </div>
+      );
+    case "icon":
+      return (
+        <div style={styles.container}>
+          <span style={styles.span}>
+            {property.des}:{" "}
+            <i
+              onClick={() => setOpenSelectIcon(!openSelectIcon)}
+              style={styles.icon}
+              className={property.value}
+            />
+          </span>
+          <div>
+            <ul className={openSelectIcon ? "showIcon" : "hideIcon"}>
+              {icons.map((icon) => (
+                <li onClick={() => handleChangeIcon(icon)}>
+                  {/* icon-bootstrap */}
+                  <i style={styles.icon} className={icon} />
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       );
     case "color":

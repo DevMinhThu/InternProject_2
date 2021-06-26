@@ -6,12 +6,14 @@ import Button from "./CompList/Button";
 import Footer from "./CompList/Footer";
 import Form from "./CompList/Form";
 import Header from "./CompList/Header";
+import Container from "./CompList/Container";
 
 const CompList = {
   button: Button,
   form: Form,
   header: Header,
   footer: Footer,
+  container: Container,
 };
 
 function Component({ block }) {

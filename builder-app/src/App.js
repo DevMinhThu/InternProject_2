@@ -9,6 +9,51 @@ function App() {
   const [content] = useState({
     body: [
       {
+        _uid: "BUY6Drn9e9",
+        component: "container",
+        properties: {
+          justifyContent: {
+            value: "center",
+            type: "string",
+            des: "JustifyContent",
+            // values: ["center", "start"],
+          },
+          background: {
+            value: "#dfe6e9",
+            type: "color",
+            des: "BG",
+          },
+        },
+        children: [
+          {
+            _uid: "BUY6Drn9e4",
+            component: "button",
+            properties: {
+              title: {
+                value: "Button",
+                type: "string",
+                des: "Caption",
+              },
+              background: {
+                value: "#E91E63",
+                type: "color",
+                des: "BG",
+              },
+              width: {
+                value: "100",
+                type: "string",
+                des: "W",
+              },
+              height: {
+                value: "30",
+                type: "string",
+                des: "H",
+              },
+            },
+          },
+        ],
+      },
+      {
         _uid: "BUY6Drn9e4",
         component: "button",
         properties: {
@@ -56,14 +101,6 @@ function App() {
             des: "BG",
           },
         },
-
-        // children: [
-        //   {
-        //     _uid: "BUY6Drn9e2",
-        //     component: "form",
-        //     headline: "form",
-        //   },
-        // ],
       },
       {
         _uid: "BUY6Drn9e5",
@@ -76,9 +113,24 @@ function App() {
             des: "caption",
           },
           background: {
-            value: "#A62DBE",
+            value: "#00cec9",
             type: "color",
             des: "BG",
+          },
+          leftIcon: {
+            value: "bi bi-chat-dots",
+            type: "icon",
+            des: "left icon",
+          },
+          centerIcon: {
+            value: "bi bi-heart-fill",
+            type: "icon",
+            des: "center icon",
+          },
+          rightIcon: {
+            value: "bi bi-bell",
+            type: "icon",
+            des: "right icon",
           },
         },
       },

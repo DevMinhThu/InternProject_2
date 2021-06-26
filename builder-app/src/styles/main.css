@@ -82,5 +82,7 @@ html {
           flex-direction: column;
   border-top: 1px solid black;
   padding: 10px;
+  overflow: scroll;
+  width: 250px;
 }
 /*# sourceMappingURL=main.css.map */
