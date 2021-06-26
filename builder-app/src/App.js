@@ -18,6 +18,16 @@ function App() {
             des: "JustifyContent",
             // values: ["center", "start"],
           },
+          flexDirection: {
+            value: "column",
+            type: "string",
+            des: "FlexDirection",
+          },
+          alignItems: {
+            value: "",
+            type: "string",
+            des: "AlignItems",
+          },
           background: {
             value: "#dfe6e9",
             type: "color",
@@ -48,6 +58,69 @@ function App() {
                 value: "30",
                 type: "string",
                 des: "H",
+              },
+            },
+          },
+          {
+            _uid: "BUY6Drn9e1",
+            component: "header",
+            properties: {
+              left: {
+                value: "Back",
+                type: "string",
+                des: "left content",
+              },
+              title: {
+                value: "Header",
+                type: "string",
+                des: "center content",
+              },
+              right: {
+                value: "Action",
+                type: "string",
+                des: "right content",
+              },
+              background: {
+                value: "#3F51B5",
+                type: "color",
+                des: "BG",
+              },
+              icon: {
+                value: "bi bi-chevron-left",
+                type: "icon",
+                des: "Icon",
+              },
+            },
+          },
+          {
+            _uid: "BUY6Drn9e5",
+            component: "footer",
+            headline: "footer",
+            properties: {
+              title: {
+                value: "Footer",
+                type: "string",
+                des: "caption",
+              },
+              background: {
+                value: "#00cec9",
+                type: "color",
+                des: "BG",
+              },
+              leftIcon: {
+                value: "bi bi-chat-dots",
+                type: "icon",
+                des: "left icon",
+              },
+              centerIcon: {
+                value: "bi bi-heart-fill",
+                type: "icon",
+                des: "center icon",
+              },
+              rightIcon: {
+                value: "bi bi-bell",
+                type: "icon",
+                des: "right icon",
               },
             },
           },
@@ -90,15 +163,30 @@ function App() {
         _uid: "BUY6Drn9e1",
         component: "header",
         properties: {
+          left: {
+            value: "Back",
+            type: "string",
+            des: "left content",
+          },
           title: {
             value: "Header",
             type: "string",
-            des: "caption",
+            des: "center content",
+          },
+          right: {
+            value: "Action",
+            type: "string",
+            des: "right content",
           },
           background: {
             value: "#3F51B5",
             type: "color",
             des: "BG",
+          },
+          icon: {
+            value: "bi bi-chevron-left",
+            type: "icon",
+            des: "Icon",
           },
         },
       },

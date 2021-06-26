@@ -7,8 +7,9 @@ function Container(props) {
       style={{
         display: "flex",
         justifyContent: props.justifyContent,
+        flexDirection: props.flexDirection,
+        alignItems: props.alignItems,
         backgroundColor: props.background,
-        height: "50px",
       }}
     >
       {props.children}

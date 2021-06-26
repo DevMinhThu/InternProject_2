@@ -17,11 +17,11 @@ function Header(props) {
         onClick={props.onClick}
       >
         <div>
-          <i className="bi bi-chevron-left" />
-          Back
+          <i className={props.icon} />
+          {props.left}
         </div>
         <div>{props.title}</div>
-        <div>Action</div>
+        <div>{props.right}</div>
       </div>
       <div>{props.children}</div>
     </div>
