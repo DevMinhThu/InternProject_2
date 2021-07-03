@@ -113,6 +113,16 @@ export const comps = {
                   type: "string",
                   des: "BorderRadius",
                 },
+                height: {
+                  value: "35",
+                  type: "string",
+                  des: "height",
+                },
+                margin: {
+                  value: "5",
+                  type: "string",
+                  des: "margin",
+                },
               },
             },
             {
@@ -143,6 +153,93 @@ export const comps = {
                   value: "25",
                   type: "string",
                   des: "margin",
+                },
+              },
+            },
+          ],
+        },
+
+        //================================================================
+        {
+          _uid: "BUY6Drn9e9",
+          component: "container",
+          properties: {
+            justifyContent: {
+              value: "space-around",
+              type: "string",
+              des: "JustifyContent",
+            },
+            flexDirection: {
+              value: "row",
+              type: "string",
+              des: "FlexDirection",
+            },
+            alignItems: {
+              value: "center",
+              type: "string",
+              des: "AlignItems",
+            },
+            background: {
+              value: "#2E3B50",
+              type: "color",
+              des: "BG",
+            },
+            height: {
+              value: "10",
+              type: "string",
+              des: "height",
+            },
+          },
+          children: [
+            {
+              _uid: "BUY6Drn9ee",
+              component: "text",
+              properties: {
+                title: {
+                  value: "Create Account",
+                  type: "string",
+                  des: "content",
+                },
+                color: {
+                  value: "#fff",
+                  type: "color",
+                  des: "text color",
+                },
+                fontSize: {
+                  value: "10",
+                  type: "string",
+                  des: "FontSize",
+                },
+                background: {
+                  value: "#fff",
+                  type: "color",
+                  des: "BG",
+                },
+              },
+            },
+            {
+              _uid: "BUY6Drn9ee",
+              component: "text",
+              properties: {
+                title: {
+                  value: "Need Help?",
+                  type: "string",
+                  des: "content",
+                },
+                color: {
+                  value: "#fff",
+                  type: "color",
+                  des: "text color",
+                },
+                fontSize: {
+                  value: "10",
+                  type: "string",
+                  des: "FontSize",
+                },
+                background: {
+                  value: "#fff",
+                  type: "color",
+                  des: "BG",
                 },
               },
             },
@@ -244,11 +341,38 @@ export const comps2 = {
           },
           children: [
             {
+              _uid: "BUY6Drn9eg",
+              component: "avatar",
+              properties: {
+                src: {
+                  value:
+                    "https://pluginicons.craft-cdn.com/avataaars.svg?mtime=20200827094241&focal=none?1598521361",
+                  type: "string",
+                  des: "Image",
+                },
+                background: {
+                  value: "",
+                  type: "color",
+                  des: "BG",
+                },
+                width: {
+                  value: "150",
+                  type: "string",
+                  des: "width",
+                },
+                height: {
+                  value: "150",
+                  type: "string",
+                  des: "height",
+                },
+              },
+            },
+            {
               _uid: "BUY6Drn9e4",
               component: "button",
               properties: {
                 title: {
-                  value: "LOGIN",
+                  value: "Show Info",
                   type: "string",
                   des: "caption",
                 },
