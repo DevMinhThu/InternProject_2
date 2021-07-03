@@ -38,7 +38,7 @@ function PropEditor({ key, property, forceUpdate, update, selectedComp }) {
         height: "25px",
         borderRadius: "5px",
         background: "#fff",
-        backgroundImage: "linear-gradient(to right, red , yellow)",
+        backgroundImage: "linear-gradient(to right, #2E3B50 , #C8D0DD)",
       },
       input: {
         background: "#343a40",
