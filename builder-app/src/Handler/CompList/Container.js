@@ -10,6 +10,7 @@ function Container(props) {
         flexDirection: props.flexDirection,
         alignItems: props.alignItems,
         backgroundColor: props.background,
+        height: `${props.height}%`,
       }}
     >
       {props.children}

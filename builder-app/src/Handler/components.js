@@ -7,6 +7,7 @@ import Footer from "./CompList/Footer";
 import Form from "./CompList/Form";
 import Header from "./CompList/Header";
 import Container from "./CompList/Container";
+import Text from "./CompList/Text";
 
 const CompList = {
   button: Button,
@@ -14,6 +15,7 @@ const CompList = {
   header: Header,
   footer: Footer,
   container: Container,
+  text: Text,
 };
 
 function Component({ block }) {

@@ -4,12 +4,15 @@ import { Input, Space } from "antd";
 function Form(props) {
   return (
     <div>
-      <Space
-        style={{ margin: "5px" }}
-        direction="vertical"
-        onClick={props.onClick}
-      >
-        <Input.Password style={{ width: "200px" }} placeholder={props.title} />
+      <Space direction="vertical" onClick={props.onClick}>
+        <Input
+          placeholder={props.user}
+          style={{ borderRadius: `${props.borderRadius}px` }}
+        />
+        <Input.Password
+          placeholder={props.password}
+          style={{ borderRadius: `${props.borderRadius}px` }}
+        />
       </Space>
     </div>
   );

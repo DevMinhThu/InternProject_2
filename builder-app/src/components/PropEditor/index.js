@@ -4,8 +4,6 @@ import reactCSS from "reactcss";
 import { icons } from "../../constants/icon";
 
 function PropEditor({ key, property, forceUpdate, update, selectedComp }) {
-  console.log(property);
-
   const [color, setColor] = useState(selectedComp.background.value);
   const [displayColorPicker, setDisplayColorPicker] = useState(false);
   const [openSelectIcon, setOpenSelectIcon] = useState(false);

@@ -9,11 +9,11 @@ function Footer(props) {
         display: "flex",
         justifyContent: "space-around",
         alignItems: "center",
-        height: "30px",
-        margin: "5px 0px",
+        height: `${props.height}px`,
       },
       icon: {
         color: "#fff",
+        fontSize: "20px",
       },
     },
   });

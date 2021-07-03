@@ -11,7 +11,7 @@ function Button(props) {
         border: 0,
         color: "#fff",
         backgroundColor: props.background,
-        margin: "5px",
+        margin: `${props.margin}px`,
       }}
     >
       {props.title}

@@ -15,7 +15,7 @@ export const SidebarData = () => {
           headline: "Button",
           properties: {
             title: {
-              value: "hello",
+              value: "Button",
               type: "String",
             },
             background: {
@@ -51,14 +51,15 @@ export const SidebarData = () => {
               value: "#3498db",
               type: "color",
             },
+            leftIcon: {
+              value: "bi bi-list",
+              type: "icon",
+            },
+            rightIcon: {
+              value: "bi bi-gear",
+              type: "icon",
+            },
           },
-          // children: [
-          //   {
-          //     _uid: "BUY6Drn9e2",
-          //     component: "form",
-          //     headline: "form",
-          //   },
-          // ],
         },
       ],
     },
@@ -80,6 +81,14 @@ export const SidebarData = () => {
             background: {
               value: "#fff",
               type: "color",
+            },
+            password: {
+              value: "Password",
+              type: "string",
+            },
+            user: {
+              value: "User@gmail.com",
+              type: "string",
             },
           },
         },
@@ -103,6 +112,21 @@ export const SidebarData = () => {
             background: {
               value: "#3F51B5",
               type: "color",
+            },
+            height: {
+              value: "30",
+            },
+            leftIcon: {
+              value: "bi bi-chat-dots",
+              type: "icon",
+            },
+            centerIcon: {
+              value: "bi bi-house",
+              type: "icon",
+            },
+            rightIcon: {
+              value: "bi bi-bell",
+              type: "icon",
             },
           },
         },

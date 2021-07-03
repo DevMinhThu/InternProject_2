@@ -5,7 +5,7 @@ import SideBar from "./Sidebar";
 import Toolkit from "./Toolkit";
 // import { SidebarData } from "./Sidebar/SidebarData";
 
-function Page({ content, selectedComp, update, forceUpdate }) {
+function Page({ content, content2, selectedComp, update, forceUpdate }) {
   return (
     <div className="main_container">
       <Router>
@@ -19,6 +19,7 @@ function Page({ content, selectedComp, update, forceUpdate }) {
 
       <Editor
         content={content}
+        content2={content2}
         selectedComp={selectedComp}
         update={update}
         forceUpdate={forceUpdate}
